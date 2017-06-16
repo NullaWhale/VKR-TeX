@@ -1,0 +1,67 @@
+\documentclass[a4paper]{extarticle}
+
+\usepackage[12pt]{extsizes}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{cmap}
+\usepackage{tabu}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{mathptmx}
+\usepackage{amsmath, amsfonts}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\renewcommand{\labelitemi}{–}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\linespread{1.3}
+\renewcommand{\rmdefault}{ftm}
+\usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm]{geometry}
+
+% JavaScript
+\lstdefinelanguage{JavaScript}{
+  morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morestring=[b]",
+  morestring=[b]'
+}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\large Министерство образования и науки РФ\par
+\large Федеральное государственное бюджетное образовательное учреждение высшего образования\par
+\large «Рыбинский государственный авиационный технический университет имени П.А. Соловьева»\par\vspace{1cm}
+
+\large Факультет радиоэлектроники и информатики\par
+\large Кафедра Математическое и программное обеспечение ЭВС\par\vspace{1cm}
+
+\Large ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА\par
+\large\textbf{«Разработка подсистемы визуализации аналитического отчета в системе бюджетирования»}\par\vspace{1cm}
+\Large Дипломная работа\par\vspace{1cm}
+
+\raggedright
+\large{на соискание квалификации}\par
+\large{по специальности Бакалавр}\par\vspace{1cm}
+
+\begin{tabu}{X[l] X[r]}
+\large{Соискатель, студент группы ИПБ-13} & \large{Н. А. Ляпушкин}\par\\
+\large{Руководитель} & \large{С. В. Маврин}\par\\
+\large{Консультант по экономике,} & \large{}\par\\
+\large{канд. техн. наук, доцент} & \large{Н. А. Клементьева}\par\\
+\large{Нормоконтролер,} & \large{}\par\\
+\large{канд. техн. наук} & \large{Ю. А. Черных}\par\\
+\large{К защите допустить} & \large{}\par\\
+\large{Зав. кафедрой, канд. физ.-мат. наук	} & \large{В. Г. Шаров}\par\\
+\end{tabu}
+\vspace*{\fill}\centering\large{Рыбинск, 2017}
+\end{titlepage}
+
+\end{document}

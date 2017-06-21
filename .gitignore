@@ -7,3 +7,5 @@
 *.log
 *.bbl
 *.blg
+*.java
+*.js

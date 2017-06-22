@@ -10,23 +10,84 @@
 \usepackage{listings}
 \usepackage{mathptmx}
 \usepackage{amsmath, amsfonts}
+\usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{graphicx}
+\usepackage{longtable}
+\usepackage[usenames,dvipsnames]{color} % названия цветов
+\renewcommand{\rmdefault}{ftm} % Times New Roman
 \usepackage[T2A]{fontenc}
+\usepackage{mathtext}
 \usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+\usepackage[russian,english]{babel}
+
 \renewcommand{\labelitemi}{–}
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+\setlist{nolistsep}
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}} % Формат рисунка секция.номер
+\renewcommand{\thetable}{\thesection.\arabic{table}} % Формат таблицы секция.номер
+\numberwithin{equation}{section}
+
+\usepackage[tableposition=top]{caption}
+\captionsetup[table]{
+  labelsep = newline,
+  textfont = sc, 
+  name = TABLE, 
+  justification=justified,
+  singlelinecheck=false,%%%%%%% a single line is centered by default
+  labelsep=colon,%%%%%%
+  skip = \medskipamount}
+\usepackage{subcaption}
+\DeclareCaptionLabelFormat{gostfigure}{Рисунок #2}
+\DeclareCaptionLabelFormat{gosttable}{Таблица #2}
+\DeclareCaptionLabelSeparator{gost}{~---~}
+\captionsetup{labelsep=gost}
+\captionsetup[figure]{labelformat=gostfigure}
+\captionsetup[table]{labelformat=gosttable}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+
+\newcommand{\TT}[2]{\text{\textit{#1}}_\text{\textit{#2}}}
 
 \linespread{1.3}
+\parindent=1.25cm
+\setlist[enumerate,itemize]{itemindent=1.7cm, leftmargin=0cm}
 \renewcommand{\rmdefault}{ftm}
 \usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm]{geometry}
-\setlength{\parskip}{0.5cm}
-\usepackage{ragged2e}
-\justifying
-\pretolerance10000
+\setlength{\parskip}{1.5pt}
+% \usepakage{ragged2e}
+% \justifying
+\sloppy
+\hyphenpenalty=10000
+\clubpenalty=10000
+\widowpenalty=10000
+\setcounter{page}{8}
 
+\lstset{
+	basicstyle=\small\ttfamily,
+    columns=fullflexible,
+    % frame=single,
+    breaklines=true,
+}
+
+% JavaScript
+\lstdefinelanguage{JavaScript}{
+  morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morestring=[b]",
+  morestring=[b]'
+}
 
 \begin{document}
 
